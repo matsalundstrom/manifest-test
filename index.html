@@ -3,11 +3,31 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Test</title>
+
+  <title>Test with manifest</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <link rel="manifest" href="/manifest.json">
+
 </head>
 
 <body>
-  <h1>Test again</h1>
+
+  <h1>Test with manifest</h1>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js")
+      .then(function(registration) {
+        console.log("Service Worker registered");
+      }).catch(function(err) {
+        console.log("Service Worker registration failed", err);
+      });
+    }
+  </script>
+
 </body>
 
 </html>
