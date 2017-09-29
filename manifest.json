@@ -1,0 +1,12 @@
+{
+  "name": "Test with manifest",
+  "short_name": "Test",
+  "start_url": "/index.html",
+  "icons": [
+    {
+      "src": "images/test-144.png",
+      "sizes": "144x144"
+    }
+  ],
+  "display": "fullscreen"
+}
